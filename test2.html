@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checker de Acertijos</title>
+</head>
+<body>
+    <h1>Ingrese la respuesta:</h1>
+    <form>
+        <input type="text" id="respuesta" placeholder="Escribe tu respuesta aquí">
+        <button type="button" onclick="verificarRespuesta()">Verificar</button>
+    </form>
+    <p id="mensaje"></p>
+
+    <script>
+        function verificarRespuesta() {
+            var respuestaIngresada = document.getElementById("respuesta").value.toLowerCase();
+            // Cambia "respuesta_correcta" por la respuesta correcta del acertijo
+            if (respuestaIngresada === "respuesta_correcta") {
+                document.getElementById("mensaje").innerHTML = "¡Correcto! Has resuelto el acertijo.";
+            } else {
+                document.getElementById("mensaje").innerHTML = "¡Incorrecto! Inténtalo de nuevo.";
+            }
+        }
+    </script>
+</body>
+</html>
